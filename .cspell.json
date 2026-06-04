@@ -1,0 +1,21 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+        "dynamicsymbols",
+        "vlatex",
+        "vprinting",
+        "msubs",
+        "latexs",
+        "jmath",
+        "imath",
+        "mathjax",
+        "heaviside",
+        "lambdify",
+        "N2Leq",
+        "NmB",
+        "FmE",
+        "NmH"
+    ],
+    "ignorePaths": ["*.ipynb_checkpoints"]
+}
