@@ -20,29 +20,17 @@ For **exam-style physics problems**, the coefficient of static friction ($\mu_s$
 
 ## 🧠 How exam questions are designed
 
-<p align="center">
-  <img src="../figures/friction-figure-01.jpg" alt="Friction problem example 1" width="50%" />
-</p>
+![Friction problem example 1](../figures/friction-figure-01.jpg)
 
-<p align="center">
-  <img src="../figures/friction-figure-02.jpg" alt="Friction problem example 2" width="50%" />
-</p>
+![Friction problem example 2](../figures/friction-figure-02.jpg)
 
-<p align="center">
-  <img src="../figures/friction-figure-03.jpg" alt="Friction problem example 3" width="50%" />
-</p>
+![Friction problem example 3](../figures/friction-figure-03.jpg)
 
-<p align="center">
-  <img src="../figures/friction-figure-04.jpg" alt="Friction problem example 4" width="50%" />
-</p>
+![Friction problem example 4](../figures/friction-figure-04.jpg)
 
-<p align="center">
-  <img src="../figures/friction-figure-05.jpg" alt="Friction problem example 5" width="50%" />
-</p>
+![Friction problem example 5](../figures/friction-figure-05.jpg)
 
-<p align="center">
-  <img src="../figures/friction-figure-06.jpg" alt="Friction problem example 6" width="50%" />
-</p>
+![Friction problem example 6](../figures/friction-figure-06.jpg)
 
 * If the problem says **“rough surface”** → take **($\mu_s = 0.5$)** unless told otherwise
 * If a value is **important**, it will usually be **given explicitly**
