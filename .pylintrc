@@ -1,0 +1,2 @@
+[MESSAGES CONTROL]
+disable=invalid-name,missing-module-docstring,trailing-whitespace,unused-import,wrong-import-position
