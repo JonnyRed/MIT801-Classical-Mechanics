@@ -55,6 +55,18 @@ Here is a standardized, high-contrast color-coding system optimized for classica
 | Resistive Forces      | Charcoal / Dark Grey | #4D4D4D  | Represents friction ($\vec{f}$) or air resistance. Keeps passive, opposing forces subtle.                   |
 | Velocity              | Emerald Green        | #00994D  | Shows the direction of motion ($\vec{v}$). Easily distinguishes movement from the forces causing it.        |
 | Acceleration          | Vibrant Orange       | #FF8000  | Shows acceleration ($\vec{a}$). Often drawn offset or floating next to the object, rather than attached.    |
+| Momentum ($\vec{p}$) | Deep Navy Blue | #002266 | Represents linear momentum ($\vec{p} = m\vec{v}$). Since it shares the same direction as velocity, draw it parallel to your green velocity arrow, but slightly offset. |
+| Vector Type | Recommended Color | Hex Code | Purpose & Best Practices |
+| Impulse ($\vec{J}$) | Electric Indigo | #4D00FF | Represents the change in momentum. Perfect for highlighting brief, high-force moments like a bat hitting a ball. |
+
+### 💡 Visual Tip for Drawing Velocity vs. Momentum
+
+Because momentum and velocity always point in the exact same direction, layering them directly on top of each other makes one disappear.
+To show both clearly on a moving mass in Draw.io:
+
+   1. Draw your Velocity arrow (#00994D Green) originating directly from the center of the object.
+   2. Draw your Momentum arrow (#002266 Navy) slightly higher or lower, running perfectly parallel.
+   3. Use a slightly thinner line weight (1.5pt) for the momentum arrow so it does not crowd the main velocity vector.
 
 ## 🛠️ How to Implement and Apply This Fast in Draw.io
 
