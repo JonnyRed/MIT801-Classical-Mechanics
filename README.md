@@ -150,6 +150,36 @@ PE = m * g * h
 E_total = KE + PE
 ```
 
+## Notebook Guide: mass-spring-damper.ipynb
+
+The notebook [mass-spring-damper.ipynb](mass-spring-damper.ipynb) derives the equation of motion for a 1D vertical mass-spring-damper system using symbolic mechanics.
+
+### What This Notebook Covers
+
+1. Imports and print configuration for SymPy mechanics rendering.
+2. Helper functions for readable reference-frame basis labels.
+3. System diagram and variable definitions.
+4. Symbol and state setup:
+   - Dynamic variables: $x(t)$ (position), $v(t)$ (speed)
+   - Parameters: $m, c, k, g, t$
+5. Kinematic definitions with points $O$ (fixed) and $P$ (particle):
+   $$\vec{r}_{P/O} = x\,\hat{n}_x, \quad \vec{v}_{P/N} = v\,\hat{n}_x$$
+6. Force model and Newton's second law:
+   $$\vec{F} = -c\vec{v}_{P/N} - k\vec{r}_{P/O} + mg\hat{n}_x, \quad \vec{F} = m\vec{a}_{P/N}$$
+7. Symbolic solve for acceleration (state equation in first-order form):
+   $$\dot{v} = g - \frac{c}{m}v - \frac{k}{m}x$$
+
+### Expected Outcome
+
+When all cells run successfully, the notebook displays:
+
+- Particle velocity expression in frame $N$
+- Net force expression
+- Newton's-law equation of motion
+- Closed-form symbolic acceleration expression
+
+If this notebook appears to hang on the first import cell, restart the notebook kernel and ensure it is using the classical-mechanics environment.
+
 ## Dependencies
 
 ### Core Packages
