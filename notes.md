@@ -95,14 +95,120 @@ Here is a high-contrast extension to your color-coding system, specifically sele
 | Angular Momentum ($\vec{L}$)                    | Magenta / Pink     | #CC0066  | Represents rotational momentum. Highly visible when drawn along the axis of rotation using the right-hand rule.                          |
 | Centripetal / Radial Acceleration ($\vec{a}_c$) | Gold / Deep Yellow | #E6B800  | Points directly inward toward the center of the circular path. Distinct from the vibrant orange used for linear/tangential acceleration. |
 
-----
-
-## 🎨 How to Use These for Rotational Visuals in Draw.io
+## How to Use These for Rotational Visuals in Draw.io
 
 Because rotational quantities are often represented as 3D concepts on a 2D canvas, use these styling tweaks to make them clear:
 
 - The Right-Hand Rule (Linear Axes): When drawing $\vec{\omega}$ or $\vec{L}$ acting along a straight axis of rotation, make these arrows thicker (3pt) than your standard force lines to show they represent an entire rotational system.
 - Curved Trajectories: For the curved arrows showing the direction of spin, use the Teal or Deep Purple with the Curve connector setting. Set the opacity to 70% if the curve passes over a solid body or mass.
+
+## Lagrange's Equation
+
+The core formula for **Lagrange's equation** (commonly referred to as the **Euler-Lagrange equation**) for a system described by a set of generalized coordinates $q_i$ is:
+
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = 0$$
+
+Or written equivalently:
+
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) = \frac{\partial L}{\partial q_i}$$
+
+### Component Breakdown
+
+- **$L$ (The Lagrangian):** Defined as the difference between kinetic energy ($T$) and potential energy ($V$), $L = T - V$.
+
+- **$q_i$:** The generalized coordinate representing the position of the system along the $i$-th degree of freedom (e.g., $x, y, z, \theta$).
+
+- **$\dot{q}_i$:** The generalized velocity, defined as the time derivative of the generalized coordinate ($\dot{q}_i = \frac{dq_i}{dt}$).
+
+- **$\frac{\partial L}{\partial \dot{q}_i}$:** The partial derivative of the Lagrangian with respect to generalized velocity (often called generalized momentum).
+
+- **$\frac{\partial L}{\partial q_i}$:** The partial derivative of the Lagrangian with respect to the generalized coordinate (often corresponding to generalized force).
+
+- **$t$:** Time.
+
+### Extension (Non-Conservative Forces & Constraints)
+
+If non-conservative forces $F$ or constraints $\eta$ are present in the system, the equation is generalized to:
+
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) = \frac{\partial L}{\partial q_i} + F\frac{\partial \eta}{\partial q_i}$$
+
+## Arc Length of functions
+
+### Arc Length of a Function $y=f(x)$
+
+For the graph $y=f(x)$ on the interval $a \le x \le b$, the <keyword id="kw_b1bd36303090bb4b622f6f93">arc length</keyword> is
+
+$$
+s=\int_a^b \sqrt{1+\left(f'(x)\right)^2}\,dx.
+$$
+
+**Conditions**
+
+This formula applies when $f$ is differentiable on $[a,b]$ and $f'(x)$ is integrable.
+
+### Arc Length of Parametric Functions
+
+**1. Parametric arc length**
+
+For a parametric curve
+
+$$
+x=x(t), \qquad y=y(t),
+$$
+
+the length over the parameter interval $t\in[a,b]$ is given by the <keyword id="kw_81f007bca8b1bc73351e873d">arc length formula</keyword>:
+
+$$
+s=\int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt.
+$$
+
+This follows from
+
+$$
+ds=\sqrt{dx^2+dy^2}
+$$
+
+and the relations
+
+$$
+dx=\frac{dx}{dt}\,dt,
+\qquad
+dy=\frac{dy}{dt}\,dt.
+$$
+
+Therefore,
+
+$$
+\boxed{
+s=\int_a^b
+\sqrt{\left(x'(t)\right)^2+\left(y'(t)\right)^2}\,dt
+}
+$$
+
+**2. Partial range of the curve**
+
+If the desired portion corresponds to parameter values from $t=t_1$ to $t=t_2$, use
+
+$$
+\boxed{
+s=\int_{t_1}^{t_2}
+\sqrt{\left(x'(t)\right)^2+\left(y'(t)\right)^2}\,dt
+}
+$$
+
+The direction of traversal does not affect the length, so one may use the smaller and larger parameter values as the limits.
+
+**3. If the range is specified by $x$-values**
+
+If the partial range is specified by $x=x_1$ to $x=x_2$, first find the corresponding parameter values:
+
+$$
+x(t_1)=x_1,
+\qquad
+x(t_2)=x_2.
+$$
+
+Then evaluate the same parametric arc length integral from $t_1$ to $t_2$. If $x(t)$ is one-to-one on the interval, this is direct. If not, split the curve into parameter intervals where the desired portion is traced exactly once.
 
 ----
 
