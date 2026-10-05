@@ -2,20 +2,23 @@
     "version": "0.2",
     "language": "en",
     "words": [
+        "colour",
         "dynamicsymbols",
-        "vlatex",
-        "vprinting",
-        "msubs",
-        "latexs",
-        "jmath",
-        "imath",
-        "mathjax",
+        "FmE",
         "heaviside",
+        "imath",
+        "jmath",
         "lambdify",
+        "latexs",
+        "mathjax",
+        "msubs",
         "N2Leq",
         "NmB",
-        "FmE",
-        "NmH"
+        "NmH",
+        "vlatex",
+        "vprinting"
     ],
-    "ignorePaths": ["*.ipynb_checkpoints"]
+    "ignorePaths": [
+        "*.ipynb_checkpoints"
+    ]
 }
