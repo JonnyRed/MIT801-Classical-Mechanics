@@ -1,12 +1,12 @@
-# Rotational Motion Reference Sheet
+# Rigid Body Rotational Kinematics & Dynamics: Complete Study Notes
 
-This reference sheet covers angular velocity, torque, and moment of inertia — the core definitions, physical principles, geometric theorems, and mathematical relationships governing fixed-axis rotational kinematics and dynamics.
+This comprehensive reference document combines rotational kinematics and dynamics, covering angular velocity, angular acceleration, torque, moment of inertia, rotational equations of motion, and rotational energy.
 
 ---
 
-## 1. Angular Velocity and $\omega_z = \frac{d\theta}{dt}$
+## 1. Rotational Kinematics & Angular Velocity ($\omega_z = \frac{d\theta}{dt}$)
 
-The formula **$\omega_z = \frac{d\theta}{dt}$** defines the **$z$-component of the angular velocity vector** for a rigid body undergoing fixed-axis rotation. In the broader framework of rotational kinematics and dynamics, this relation serves as the fundamental link between an object's changing angular position, its vector representation of rotation, its linear velocity at individual points, and its overall rotational energy.
+The relation **$\omega_z = \frac{d\theta}{dt}$** defines the **$z$-component of the angular velocity vector** for a rigid body undergoing fixed-axis rotation. It links angular position changes, vector rotation, linear velocity at individual points, and rotational energy.
 
 ### 1.1 Component vs. Vector Representation
 
@@ -23,30 +23,32 @@ Because $\omega_z$ is an algebraic component, it can be positive, zero, or negat
 * **Clockwise Rotation**: If the object rotates clockwise, $\theta$ decreases with time ($\omega_z < 0$) and $\vec{\omega}$ points in the **$-\hat{k}$ direction**.
 * **Right-Hand Rule**: The vector direction is established by curling the fingers of the right hand in the direction of rotation; the extended right thumb points in the direction of $\vec{\omega}$.
 
-### 1.3 Uniformity Across a Rigid Body
+### 1.3 Angular Acceleration: Speeding Up vs. Slowing Down
+
+The rate of change of angular velocity defines the $z$-component of angular acceleration:
+$$\alpha_z = \frac{d\omega_z}{dt} = \frac{d^2\theta}{dt^2}$$
+
+Whether an object is **speeding up** or **slowing down** depends on the **relative signs** of $\omega_z$ and $\alpha_z$, not the sign of $\alpha_z$ alone:
+
+* **Speeding Up ($\omega_z \cdot \alpha_z > 0$)**: The angular acceleration vector $\vec{\alpha}$ points in the **same direction** as the angular velocity vector $\vec{\omega}$.
+  * *Counterclockwise & Speeding Up*: $\omega_z > 0$ and $\alpha_z > 0$
+  * *Clockwise & Speeding Up*: $\omega_z < 0$ and $\alpha_z < 0$
+* **Slowing Down ($\omega_z \cdot \alpha_z < 0$)**: The angular acceleration vector $\vec{\alpha}$ points in the **opposite direction** to the angular velocity vector $\vec{\omega}$.
+  * *Counterclockwise & Slowing Down*: $\omega_z > 0$ and $\alpha_z < 0$
+  * *Clockwise & Slowing Down*: $\omega_z < 0$ and $\alpha_z > 0$
+
+### 1.4 Uniformity Across a Rigid Body
 
 A defining property of a **rigid body** in fixed-axis rotation is that **every single mass element or point in the body shares the exact same angular velocity $\omega_z$** at any instant. If different parts of the object possessed different angular velocities, mass elements would catch up to or pass one another, which would violate the rigid-body condition that inter-point distances remain fixed.
 
-### 1.4 Broader Context in Kinematics and Dynamics
-
-Within the broader framework of classical mechanics, $\omega_z$ connects to several critical concepts:
+### 1.5 Kinematic Integrals & Tangential Velocity
 
 * **Tangential Velocity**: A mass element located at a distance $r_i$ from the axis of rotation moves in a circle with a tangential velocity component given by:
   $$v_{\theta, i} = r_i \omega_z$$
   Points farther from the axis travel faster linearly, even though all points share the same $\omega_z$.
 
-* **Angular Acceleration**: The rate of change of $\omega_z$ defines the $z$-component of angular acceleration:
-  $$\alpha_z = \frac{d\omega_z}{dt} = \frac{d^2\theta}{dt^2}$$
-
 * **Kinematic Integrals**: Knowing $\alpha_z(t)$ allows determination of $\omega_z(t)$ via integration, which in turn integrates to yield angular displacement $\theta(t)$:
   $$\omega_z(t) = \omega_z(0) + \int_{0}^{t} \alpha_z(t') \, dt', \quad \theta(t) = \theta(0) + \int_{0}^{t} \omega_z(t') \, dt'$$
-
-* **Rotational Kinetic Energy**: The total rotational kinetic energy of a body rotating about a fixed axis $S$ is expressed as:
-  $$K_{\text{rot}} = \frac{1}{2} I_S \omega_z^2$$
-  where $I_S$ is the moment of inertia about that axis. Although $\omega_z$ can be negative, its square $\omega_z^2$ is always positive definite.
-
-* **Rotational Power**: The rate at which torque $\tau_{S, z}$ does work on a rotating body is directly proportional to its angular velocity:
-  $$P_{\text{rot}} = \tau_{S, z} \omega_z$$
 
 ---
 
@@ -54,7 +56,7 @@ Within the broader framework of classical mechanics, $\omega_z$ connects to seve
 
 ### 2.1 Vector Definition and Cross Product
 
-Torque measures the twisting or rotational effect of an applied force about a specific pivot point $S$ [110, 120]. For a force $\vec{F}_P$ applied at point $P$, with position vector $\vec{r}_{S,P}$ drawn from pivot $S$ to $P$, torque is defined as the vector cross product:
+Torque measures the twisting or rotational effect of an applied force about a specific pivot point $S$. For a force $\vec{F}_P$ applied at point $P$, with position vector $\vec{r}_{S,P}$ drawn from pivot $S$ to $P$, torque is defined as the vector cross product:
 $$\vec{\tau}_S = \vec{r}_{S,P} \times \vec{F}_P$$
 
 * **Magnitude**:
@@ -73,7 +75,7 @@ $$\vec{\tau}_S = \vec{r}_{S,P} \times \vec{F}_P$$
 
 ### 2.3 Internal Torque Cancellation
 
-For a system of particles or continuous rigid body, internal forces occur in equal and opposite pairs according to Newton's Third Law ($\vec{F}_{j,i} = -\vec{F}_{i,j}$) [31, 143]. Because internal forces act along the straight line connecting the mass elements, their relative position vector $\vec{r}_{S,i} - \vec{r}_{S,j}$ is collinear with $\vec{F}_{j,i}$. Consequently:
+For a system of particles or continuous rigid body, internal forces occur in equal and opposite pairs according to Newton's Third Law ($\vec{F}_{j,i} = -\vec{F}_{i,j}$). Because internal forces act along the straight line connecting the mass elements, their relative position vector $\vec{r}_{S,i} - \vec{r}_{S,j}$ is collinear with $\vec{F}_{j,i}$:
 $$(\vec{r}_{S,i} - \vec{r}_{S,j}) \times \vec{F}_{j,i} = \vec{0}$$
 **Internal torques cancel out in pairs**, meaning net rotational motion is governed solely by **external torques**:
 $$\vec{\tau}_S^{\text{net}} = \vec{\tau}_S^{\text{ext}}$$
@@ -84,7 +86,7 @@ $$\vec{\tau}_S^{\text{net}} = \vec{\tau}_S^{\text{ext}}$$
 
 ### 3.1 Definition and Physical Meaning
 
-Moment of Inertia $I_S$ is the rotational analog to mass [15, 18]. It quantifies an object's resistance to angular acceleration about a specified rotation axis passing through point $S$:
+Moment of Inertia $I_S$ is the rotational analog to mass. It quantifies an object's resistance to angular acceleration about a specified rotation axis passing through point $S$:
 
 * **Discrete Mass System**:
   $$I_S = \sum_{j=1}^N \Delta m_j r_{\perp, j}^2$$
@@ -93,17 +95,15 @@ Moment of Inertia $I_S$ is the rotational analog to mass [15, 18]. It quantifies
   where $r_\perp$ is the perpendicular distance from the mass element $dm$ to the axis of rotation.
 * **SI Units**: $\text{kg} \cdot \text{m}^2$.
 
-*Key Insight*: Unlike translational mass (which is constant), $I$ depends not only on total mass, but also on **how that mass is distributed** relative to the rotation axis [18, 19]. Moving mass farther from the axis dramatically increases $I$ due to the $r_\perp^2$ factor.
+*Key Insight*: Unlike translational mass (which is constant), $I$ depends not only on total mass, but also on **how that mass is distributed** relative to the rotation axis. Moving mass farther from the axis dramatically increases $I$ due to the $r_\perp^2$ factor.
 
 ### 3.2 Moments of Inertia for Common Standard Shapes
 
 1. **Thin Uniform Rod (length $L$, mass $m$)**:
    * About center of mass: $I_{\text{cm}} = \frac{1}{12} m L^2$
    * About one end: $I_{\text{end}} = \frac{1}{3} m L^2$
-
 2. **Thin Uniform Disc or Solid Cylinder (radius $R$, mass $m$)**:
    * About central axis perpendicular to disc: $I_{\text{cm}} = \frac{1}{2} m R^2$
-
 3. **Solid Uniform Sphere (radius $R$, mass $m$)**:
    * About any central axis: $I_{\text{cm}} = \frac{2}{5} m R^2$
 
@@ -121,7 +121,9 @@ where:
 
 ---
 
-## 4. The Rotational Equation of Motion
+## 4. Rotational Dynamics & Energy
+
+### 4.1 The Rotational Equation of Motion
 
 Combining torque and moment of inertia yields the rotational equivalent of Newton's Second Law ($\vec{F} = m\vec{a}$) for fixed-axis rotation:
 $$\tau_{S, z}^{\text{ext}} = I_S \alpha_z$$
@@ -131,12 +133,11 @@ where:
 * $I_S$ is the moment of inertia about axis $S$.
 * $\alpha_z = \frac{d\omega_z}{dt} = \frac{d^2\theta}{dt^2}$ is the $z$-component of angular acceleration.
 
----
-
-## 5. Rotational Energy, Work, and Power
+### 4.2 Rotational Kinetic Energy, Work, and Power
 
 * **Rotational Kinetic Energy**:
   $$K_{\text{rot}} = \frac{1}{2} I_S \omega_z^2$$
+  Since angular velocity is squared, rotational kinetic energy is nonnegative and does not depend on the direction of rotation.
 * **Rotational Work**:
   $$W_{\text{rot}} = \int_{\theta_i}^{\theta_f} \tau_{S, z} \, d\theta$$
 * **Work-Kinetic Energy Theorem**:

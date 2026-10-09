@@ -92,6 +92,7 @@ Here is a high-contrast extension to your color-coding system, specifically sele
 |-------------------------------------------------|--------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Torque ($\vec{\tau}$)                           | Deep Purple        | #6600CC  | Represents rotational force. Use thick lines, often drawn as a curved arrow wrapping around a pivot point.                               |
 | Angular Velocity ($\vec{\omega}$)               | Teal / Cyan        | #009999  | Shows the speed and direction of rotation. Complements the emerald green used for linear velocity.                                       |
+| Angular Acceleration ($\vec{\alpha}$)           | Vibrant Orange     | #FF8000  | Shows the change in angular velocity; $\vec{\alpha} = \alpha_z\hat{k}$ points along the rotation axis for fixed-axis rotation.           |
 | Angular Momentum ($\vec{L}$)                    | Magenta / Pink     | #CC0066  | Represents rotational momentum. Highly visible when drawn along the axis of rotation using the right-hand rule.                          |
 | Centripetal / Radial Acceleration ($\vec{a}_c$) | Gold / Deep Yellow | #E6B800  | Points directly inward toward the center of the circular path. Distinct from the vibrant orange used for linear/tangential acceleration. |
 
