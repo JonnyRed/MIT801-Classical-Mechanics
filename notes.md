@@ -49,6 +49,8 @@ Here is a standardized, high-contrast color-coding system optimized for classica
 
 | Vector Type           | Recommended Color    | Hex Code | Purpose & Best Practices                                                                                    |
 |-----------------------|----------------------|----------|-------------------------------------------------------------------------------------------------------------|
+| Displacement ($\Delta\vec{r}$) | Violet | #8A2BE2 | Shows the change in position from the initial to the final point. |
+| Impulse ($\vec{J}$) | Electric Indigo | #4D00FF | Represents the change in momentum. Perfect for highlighting brief, high-force moments like a bat hitting a ball. |
 | Net / Resultant Force | Crimson Red          | #CC0000  | Shows the final vector sum ($\vec{F}_{net}$). Use a thick line weight to make it dominant.                  |
 | Component Forces      | Light / Rose Red     | #FF6666  | Used for resolved forces (like $F_{x}$ and $F_{y}$). Set to 50% opacity to sit quietly under the net force. |
 | Applied Forces        | Royal Blue           | #0066CC  | Represents active external pushes, pulls, tensions ($\vec{T}$), or normal forces ($\vec{N}$).               |
@@ -56,8 +58,6 @@ Here is a standardized, high-contrast color-coding system optimized for classica
 | Velocity              | Emerald Green        | #00994D  | Shows the direction of motion ($\vec{v}$). Easily distinguishes movement from the forces causing it.        |
 | Acceleration          | Vibrant Orange       | #FF8000  | Shows acceleration ($\vec{a}$). Often drawn offset or floating next to the object, rather than attached.    |
 | Momentum ($\vec{p}$) | Deep Navy Blue | #002266 | Represents linear momentum ($\vec{p} = m\vec{v}$). Since it shares the same direction as velocity, draw it parallel to your green velocity arrow, but slightly offset. |
-| Vector Type | Recommended Color | Hex Code | Purpose & Best Practices |
-| Impulse ($\vec{J}$) | Electric Indigo | #4D00FF | Represents the change in momentum. Perfect for highlighting brief, high-force moments like a bat hitting a ball. |
 
 ### 💡 Visual Tip for Drawing Velocity vs. Momentum
 
@@ -88,7 +88,7 @@ Here is a high-contrast extension to your color-coding system, specifically sele
 
 ## Rotational Mechanics Color Palette
 
-| Vector / Quantity [2, 3, 4, 5, 6]               | Recommended Color  | Hex Code | Purpose & Best Practices                                                                                                                 |
+| Vector / Quantity | Recommended Color  | Hex Code | Purpose & Best Practices                                                                                                                 |
 |-------------------------------------------------|--------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Torque ($\vec{\tau}$)                           | Deep Purple        | #6600CC  | Represents rotational force. Use thick lines, often drawn as a curved arrow wrapping around a pivot point.                               |
 | Angular Velocity ($\vec{\omega}$)               | Teal / Cyan        | #009999  | Shows the speed and direction of rotation. Complements the emerald green used for linear velocity.                                       |
