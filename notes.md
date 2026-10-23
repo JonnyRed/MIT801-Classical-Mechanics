@@ -41,6 +41,59 @@ $
 }
 $
 
+## Moments of Inertia
+
+# Common Moments of Inertia
+
+The moment of inertia, $I$, measures how difficult it is to change an object's rotational motion about a specified axis.
+
+The following Markdown table lists common shapes, with $M$ representing mass, $R$ radius, $L$ length, and $h$ height.
+
+| Object                        | Axis of rotation                         | Moment of inertia, $I$                                                          |
+| ----------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
+| Point mass                    | Distance $r$ from axis                   | $I=Mr^2$                                                                         |
+| Thin hoop or ring             | Through centre, perpendicular to plane   | $I=MR^2$                                                                         |
+| Solid disc                    | Through centre, perpendicular to plane   | $I=\frac{1}{2}MR^2$                                                              |
+| Solid cylinder                | Longitudinal axis                        | $I=\frac{1}{2}MR^2$                                                              |
+| Hollow cylinder (thin-walled) | Longitudinal axis                        | $I=MR^2$                                                                         |
+| Solid sphere                  | Through centre                           | $I=\frac{2}{5}MR^2$                                                              |
+| Thin spherical shell          | Through centre                           | $I=\frac{2}{3}MR^2$                                                              |
+| Thin rod                      | Through centre, perpendicular to rod     | $I=\frac{1}{12}ML^2$                                                             |
+| Thin rod                      | Through one end, perpendicular to rod    | $I=\frac{1}{3}ML^2$                                                              |
+| Rectangular plate             | Through centre, perpendicular to plate   | $I=\frac{1}{12}M(a^2+b^2)$                                                       |
+| Solid rectangular block       | Through centre, parallel to side $L$     | $I=\frac{1}{12}M(a^2+b^2)$, where $a,b$ are the perpendicular dimensions         |
+| Annular disc (thick ring)     | Through centre, perpendicular to plane   | $I=\frac{1}{2}M(R_o^2+R_i^2)$                                                    |
+
+## Important points
+
+- The axis matters: the same object can have different moments of inertia about different axes.
+- Mass farther from the axis increases $I$: mass at a greater distance contributes proportionally to the square of that distance.
+- Units: the SI unit is $\mathrm{kg\,m^2}$.
+
+### Two useful formulas
+
+For a collection of point masses,
+
+$$
+I=\sum_i m_i r_i^2
+$$
+
+For a continuous body,
+
+$$
+I=\int r^2\,dm
+$$
+
+### The parallel-axis theorem
+
+If you know the moment of inertia about an axis through the centre of mass, you can calculate it about a parallel axis a distance $d$ away:
+
+$$
+\boxed{I=I_{\mathrm{cm}}+Md^2}
+$$
+
+For your Atwood-machine studies: a pulley modelled as a uniform solid disc has $I=\frac12 MR^2$, whereas a thin hoop has $I=MR^2$. This difference affects the pulley’s angular acceleration and the tensions on either side of the string.
+
 ## The Universal Mechanics Color Palette
 
 Here is a standardized, high-contrast color-coding system optimized for classical mechanics diagrams. Using distinct colors for different physical quantities prevents your diagrams from becoming confusing when multiple vectors overlap.
