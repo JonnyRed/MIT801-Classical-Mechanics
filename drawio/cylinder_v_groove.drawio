@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Cylinder in V-groove" id="vgroove1">
+    <mxGraphModel dx="800" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="400" pageHeight="260" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Block with V-groove -->
+        <mxCell id="block" value="" style="shape=mxgraph.basic.polygon;polyCoords=[[0,0],[0.25,0],[0.5,0.55],[0.75,0],[1,0],[1,1],[0,1]];polyline=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="20" y="67" width="322" height="148" as="geometry" />
+        </mxCell>
+
+        <!-- Cylinder (circle), center (182,66), R = 58 -->
+        <mxCell id="cyl" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="124" y="8" width="116" height="116" as="geometry" />
+        </mxCell>
+
+        <!-- Dashed horizontal line through groove vertex -->
+        <mxCell id="dash" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="104" y="148" as="sourcePoint" />
+            <mxPoint x="260" y="148" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 45 degree arrows -->
+        <mxCell id="angL" value="" style="endArrow=classic;startArrow=classic;html=1;curved=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="141" y="107" as="sourcePoint" />
+            <mxPoint x="141" y="148" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="133" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="angR" value="" style="endArrow=classic;startArrow=classic;html=1;curved=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="223" y="107" as="sourcePoint" />
+            <mxPoint x="223" y="148" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="231" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lblL" value="45°" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="85" y="112" width="40" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="lblR" value="45°" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="240" y="112" width="40" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Rotation arrow (counterclockwise) -->
+        <mxCell id="rot" value="" style="endArrow=classic;html=1;curved=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="22" as="sourcePoint" />
+            <mxPoint x="143" y="72" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="145" y="25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="omega" value="ω" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="152" y="38" width="30" height="24" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
