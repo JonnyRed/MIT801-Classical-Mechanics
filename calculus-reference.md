@@ -1,0 +1,123 @@
+# Calculus Reference: Arc Length and Parametric Curves
+
+## Arc Length of Parametric Curves
+
+For a parametric curve:
+$$x = x(t), \quad y = y(t)$$
+
+the arc length over parameter interval $t \in [a,b]$ is:
+
+$$
+\boxed{s = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt}
+$$
+
+This formula follows from the differential arc length element:
+$$ds = \sqrt{dx^2 + dy^2}$$
+
+with the relations:
+$$dx = \frac{dx}{dt}\,dt, \quad dy = \frac{dy}{dt}\,dt$$
+
+### Conditions
+
+This formula applies when $x(t)$ and $y(t)$ are differentiable on $[a,b]$ and their derivatives are integrable.
+
+## Alternative Forms
+
+### Using Prime Notation for Derivatives
+
+$$
+s = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2} \, dt
+$$
+
+### Specific Parameter Range $t_1 \le t \le t_2$
+
+$$
+s = \int_{t_1}^{t_2} \sqrt{(x'(t))^2 + (y'(t))^2} \, dt
+$$
+
+Note: The direction of traversal does not affect the arc length, so you may use the smaller and larger parameter values as the limits.
+
+### When Range is Specified by $x$-Values
+
+If the desired portion corresponds to $x = x_1$ to $x = x_2$:
+
+1. Find the corresponding parameter values:
+   $$x(t_1) = x_1, \quad x(t_2) = x_2$$
+
+2. Evaluate the parametric arc length integral from $t_1$ to $t_2$:
+   $$s = \int_{t_1}^{t_2} \sqrt{(x'(t))^2 + (y'(t))^2} \, dt$$
+
+**Note:** If $x(t)$ is one-to-one on the interval, this is straightforward. If not, split the curve into parameter intervals where the desired portion is traced exactly once.
+
+## Examples
+
+### Example 1: Circle
+
+For a circle of radius $R$:
+$$x(t) = R\cos(t), \quad y(t) = R\sin(t), \quad t \in [0, 2\pi]$$
+
+We have:
+$$\frac{dx}{dt} = -R\sin(t), \quad \frac{dy}{dt} = R\cos(t)$$
+
+$$s = \int_0^{2\pi} \sqrt{R^2\sin^2(t) + R^2\cos^2(t)} \, dt = \int_0^{2\pi} R \, dt = 2\pi R$$
+
+This is the familiar circumference formula.
+
+### Example 2: Semicircle from $(R, 0)$ to $(-R, 0)$
+
+Same parametrization as above, but $t \in [0, \pi]$:
+
+$$s = \int_0^{\pi} R \, dt = \pi R$$
+
+This is half the circumference, as expected.
+
+### Example 3: Straight Line Segment
+
+For a line segment from $(x_1, y_1)$ to $(x_2, y_2)$:
+$$x(t) = x_1 + t(x_2 - x_1), \quad y(t) = y_1 + t(y_2 - y_1), \quad t \in [0, 1]$$
+
+We have:
+$$\frac{dx}{dt} = x_2 - x_1, \quad \frac{dy}{dt} = y_2 - y_1$$
+
+$$s = \int_0^1 \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} \, dt = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$$
+
+This is the Euclidean distance formula, as expected.
+
+## Arc Length in Physics Applications
+
+### Circular Motion
+
+For a particle moving in a circle of radius $r$ at angular velocity $\omega$:
+$$\theta(t) = \omega t + \theta_0$$
+$$s(t) = r\theta(t) = r(\omega t + \theta_0)$$
+
+The instantaneous speed is:
+$$v = \frac{ds}{dt} = r\omega$$
+
+### Spiral Motion
+
+For an Archimedean spiral:
+$$r(\theta) = a\theta$$
+
+In Cartesian coordinates:
+$$x(\theta) = a\theta \cos(\theta), \quad y(\theta) = a\theta \sin(\theta)$$
+
+The arc length from $\theta = 0$ to $\theta = \theta_1$ is:
+$$s = \int_0^{\theta_1} \sqrt{(a\theta)^2 + a^2} \, d\theta$$
+
+(This integral does not have a simple closed form for general $\theta_1$.)
+
+## Related Topics
+
+- **Curvature**: $\displaystyle \kappa = \frac{\vert\vec{r}' \times \vec{r}''\vert}{|\vec{r}'|^3}$ (for 2D or 3D curves)
+- **Arc length parametrization**: Reparametrizing a curve by arc length $s$ instead of a parameter $t$
+- **Surface area of revolution**: Extension of arc length to compute surface areas
+- **Path integrals**: Line integrals along parametric curves in scalar and vector fields
+
+---
+
+## References
+
+- Stewart, J. *Calculus* (8th ed.). Cengage Learning.
+- https://en.wikipedia.org/wiki/Arc_length
+- https://mathworld.wolfram.com/ArcLength.html
