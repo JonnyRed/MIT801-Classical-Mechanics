@@ -101,7 +101,7 @@ For motion on a circle of constant radius $R$:
 
 | Concept | Formula |
 | --- | --- |
-| Definition (continuous) | $\displaystyle I = \int_{\text{body}} r^2 \, dm$ |
+| Definition (continuous, about an axis through $S$) | $\displaystyle I_S = \int_{\text{body}} r_{\text{dm}}^2 \, dm$, where $r_{\text{dm}}$ is the perpendicular distance to the axis |
 | Definition (discrete) | $\displaystyle I = \sum_i m_i r_i^2$ |
 | Rotational Kinetic Energy | $\displaystyle K_{\text{rot}} = \frac{1}{2} I \omega^2$ |
 
@@ -145,6 +145,30 @@ $$
 | Cartesian components | $\displaystyle \vec{A} \times \vec{B} = (A_y B_z - A_z B_y)\hat{i} + (A_z B_x - A_x B_z)\hat{j} + (A_x B_y - A_y B_x)\hat{k}$ |
 | Cylindrical basis | $\displaystyle \hat{r} \times \hat{\theta} = \hat{k}, \quad \hat{\theta} \times \hat{k} = \hat{r}, \quad \hat{k} \times \hat{r} = \hat{\theta}$ |
 
+### Angular Momentum
+
+#### Single Particle
+
+For a particle with momentum $\vec{p}=m\vec{v}$, angular momentum about a fixed point $S$ is:
+
+| Concept | Formula or description |
+| --- | --- |
+| Angular momentum | $\displaystyle \vec{L}_S = \vec{r}_S \times \vec{p}$ |
+| Magnitude | $\displaystyle L_S = r_S p \sin\theta = r_{S,\perp}p = r_S p_{\perp}$ |
+| Moment arm | $\displaystyle r_{S,\perp} = r_S\sin\theta$ |
+| Perpendicular momentum | $\displaystyle p_{\perp} = p\sin\theta$ |
+| Direction (right-hand rule) | Curl your fingers from $\vec{r}_S$ toward $\vec{p}$; your thumb points perpendicular to their plane |
+| SI units | $\displaystyle \text{kg}\cdot\text{m}^2\cdot\text{s}^{-1} = \text{N}\cdot\text{m}\cdot\text{s} = \text{J}\cdot\text{s}$ |
+
+#### Systems of Particles
+
+| Concept | Formula or condition |
+| --- | --- |
+| Total angular momentum | $\displaystyle \vec{L}_S^{\text{sys}} = \sum_{j=1}^{N}\vec{L}_{S,j} = \sum_{j=1}^{N}(\vec{r}_{S,j}\times\vec{p}_j)$ |
+| External torque relation | $\displaystyle \vec{\tau}_S^{\text{ext}} = \frac{d\vec{L}_S^{\text{sys}}}{dt}$, when internal forces are central and their torques cancel |
+| Change of reference point | $\displaystyle \vec{L}_A = \vec{L}_B + \vec{r}_{A,B}\times\vec{p}_{\text{sys}}$, where $\vec{r}_{A,B}$ points from $A$ to $B$ |
+| Center-of-mass frame | If $\vec{p}_{\text{sys}}=\vec{0}$, then $\vec{L}_A=\vec{L}_B$ |
+
 ### Torque
 
 | Concept | Formula |
@@ -153,14 +177,26 @@ $$
 | Torque magnitude | $\displaystyle \tau_S = r F \sin\theta = r_{\perp} F = r F_{\perp}$ |
 | Moment arm | $\displaystyle r_{\perp} = r \sin\theta$ |
 | Gravitational torque | $\displaystyle \vec{\tau}_O = \vec{R}_{\text{cm}} \times M\vec{g}$ |
+| Rate of change of angular momentum | For a particle about a fixed point $S$, $\displaystyle \vec{\tau}_S = \frac{d\vec{L}_S}{dt}$; this follows from $\displaystyle \frac{d\vec{r}_S}{dt}\times\vec{p}=\vec{v}\times m\vec{v}=\vec{0}$ and $\displaystyle \vec{F}=\frac{d\vec{p}}{dt}$ |
 
 ### Rotational Dynamics
 
 | Concept | Formula |
 | --- | --- |
-| Newton's 2nd Law (rotational) | $\displaystyle \tau_z^{\text{ext}} = I \alpha_z$ |
-| Angular momentum | $\displaystyle \vec{L} = I \vec{\omega}$ |
-| Rotational impulse-momentum | $\displaystyle \vec{\tau} \, \Delta t = \Delta \vec{L}$ |
+| Newton's 2nd Law (fixed axis) | $\displaystyle \tau_{S,z}^{\text{ext}} = \frac{dL_{S,z}}{dt} = I_S\alpha_z = I_S\frac{d^2\theta}{dt^2}$ |
+| Angular momentum component | For rotation about a fixed $z$-axis, $\displaystyle L_{S,z}=I_S\omega_z$ |
+| Angular momentum vector | For a mass distribution symmetric about the rotation axis, $\displaystyle \vec{L}_S=I_S\omega_z\hat{k}$ |
+| Angular impulse (particle) | $\displaystyle \vec{J}_S = \int_{t_i}^{t_f}\vec{\tau}_S\,dt = \Delta\vec{L}_S = \vec{L}_{S,f}-\vec{L}_{S,i}$ |
+| Angular impulse (system) | $\displaystyle \vec{J}_S^{\text{ext}} = \int_{t_i}^{t_f}\vec{\tau}_S^{\text{ext}}\,dt = (\vec{L}_S^{\text{sys}})_f-(\vec{L}_S^{\text{sys}})_i$ |
+
+### Conservation of Angular Momentum
+
+If the net external torque on a system about point $S$ is zero, its total angular momentum about that point is constant:
+
+| Condition | Consequence |
+| --- | --- |
+| $\displaystyle \vec{\tau}_S^{\text{ext}}=\vec{0}$ | $\displaystyle \frac{d\vec{L}_S^{\text{sys}}}{dt}=\vec{0}\quad\Rightarrow\quad\Delta\vec{L}_S^{\text{sys}}=\vec{0}$ |
+| Initial and final states | $\displaystyle (\vec{L}_S^{\text{sys}})_f=(\vec{L}_S^{\text{sys}})_i$ |
 
 ### Rotational Work, Energy, and Power
 
