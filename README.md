@@ -4,6 +4,12 @@ This project follows the MIT OpenCourseWare 8.01SC Classical Mechanics curriculu
 implementing concepts using SymPy and its mechanics package for symbolic
 computation and analysis.
 
+
+[MIT 8.01SC Classical Mechanics](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/)
+
+[MIT 8.01SC Online Textbook](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/online-textbook/)
+
+
 ## Course Overview
 
 MIT 8.01SC Classical Mechanics introduces the fundamental concepts of
