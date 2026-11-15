@@ -2,6 +2,21 @@
 
 ## Kinematic Motion
 
+Kinematics describes motion relative to a chosen coordinate system or reference frame.
+
+### One-Dimensional Motion
+
+For motion along the $x$-axis, let $\Delta t = t_2-t_1$ and $\Delta x = x(t_2)-x(t_1)$:
+
+| Concept | Formula |
+| --- | --- |
+| Position vector | $\displaystyle \vec{r}(t) = x(t)\hat{i}$ |
+| Displacement | $\displaystyle \Delta\vec{r} = \vec{r}(t_2)-\vec{r}(t_1) = \Delta x\,\hat{i}$ |
+| Average velocity | $\displaystyle v_{ave} = \frac{\Delta x}{\Delta t}, \quad \vec{v}_{ave} = v_{ave}\hat{i}$ |
+| Instantaneous velocity | $\displaystyle v(t) = \lim_{\Delta t\to 0}\frac{\Delta x}{\Delta t} = \frac{dx}{dt}, \quad \vec{v}(t) = v(t)\hat{i}$ |
+| Average acceleration | $\displaystyle a_{ave} = \frac{\Delta v}{\Delta t}, \quad \vec{a}_{ave} = a_{ave}\hat{i}$ |
+| Instantaneous acceleration | $\displaystyle a(t) = \lim_{\Delta t\to 0}\frac{\Delta v}{\Delta t} = \frac{dv}{dt} = \frac{d^2x}{dt^2}, \quad \vec{a}(t) = a(t)\hat{i}$ |
+
 ### Fundamental Relations
 
 $$
@@ -12,6 +27,24 @@ $$
     \end{aligned}
 }
 $$
+
+For time-dependent velocity, the corresponding change in position is:
+
+$$
+x(t)-x(t_i) = \int_{t_i}^{t} v(t')\,dt'
+$$
+
+The signed area under an acceleration–time graph gives the change in velocity; the signed area under a velocity–time graph gives the displacement.
+
+### Constant Acceleration
+
+For constant $a$, with $x(0)=x_0$ and $v(0)=v_0$:
+
+| Concept | Formula |
+| --- | --- |
+| Velocity | $\displaystyle v(t) = v_0 + at$ |
+| Average velocity | $\displaystyle v_{ave} = \frac{v_0+v(t)}{2} = v_0 + \frac{1}{2}at$ |
+| Displacement and position | $\displaystyle \Delta x = v_0t + \frac{1}{2}at^2, \quad x(t) = x_0 + \Delta x$ |
 
 ### Acceleration as a Function of Velocity
 
@@ -42,6 +75,139 @@ $$
     \end{aligned}
 }
 $$
+
+### Two-Dimensional Motion
+
+In Cartesian coordinates, motion is resolved into independent components:
+
+| Concept | Formula |
+| --- | --- |
+| Position | $\displaystyle \vec{r}(t) = x(t)\hat{i} + y(t)\hat{j}$ |
+| Velocity | $\displaystyle \vec{v}(t) = \frac{dx}{dt}\hat{i} + \frac{dy}{dt}\hat{j} = v_x(t)\hat{i} + v_y(t)\hat{j}$ |
+| Acceleration | $\displaystyle \vec{a}(t) = \frac{dv_x}{dt}\hat{i} + \frac{dv_y}{dt}\hat{j} = a_x(t)\hat{i} + a_y(t)\hat{j}$ |
+
+### Projectile Motion
+
+For a launch at $t=0$, assume no air resistance and constant downward acceleration $g \approx 9.8\text{ m}\cdot\text{s}^{-2}$, with $y$ positive upward.
+
+| Concept | Formula |
+| --- | --- |
+| Initial velocity components | $\displaystyle v_{x,0} = v_0\cos\theta_0, \quad v_{y,0} = v_0\sin\theta_0$ |
+| Initial speed and direction | $\displaystyle v_0 = \sqrt{v_{x,0}^2+v_{y,0}^2}, \quad \theta_0 = \operatorname{atan2}(v_{y,0},v_{x,0})$ for $v_0>0$ |
+| Acceleration | $\displaystyle a_x = 0, \quad a_y = -g, \quad \vec{a}(t) = -g\hat{j}$ |
+| Velocity components | $\displaystyle v_x(t) = v_{x,0}, \quad v_y(t) = v_{y,0}-gt$ |
+| Position components | $\displaystyle x(t) = x_0+v_{x,0}t, \quad y(t) = y_0+v_{y,0}t-\frac{1}{2}gt^2$ |
+| Velocity vector | $\displaystyle \vec{v}(t) = v_{x,0}\hat{i}+(v_{y,0}-gt)\hat{j}$ |
+| Position vector | $\displaystyle \vec{r}(t) = (x_0+v_{x,0}t)\hat{i}+\left(y_0+v_{y,0}t-\frac{1}{2}gt^2\right)\hat{j}$ |
+
+#### Trajectory Results
+
+The first two results apply to an initially upward launch that reaches its apex before impact, where $v_y(t_{\text{top}})=0$. In the height formula, $d=y_0$ is the launch height above ground.
+
+| Concept | Formula |
+| --- | --- |
+| Time to maximum height | $\displaystyle t_{\text{top}} = \frac{v_0\sin\theta_0}{g}$ |
+| Maximum height | $\displaystyle y_{\text{max}} = d+\frac{v_0^2\sin^2\theta_0}{2g}$ |
+| Trajectory, $v_{x,0}\ne 0$ | $\displaystyle y(x) = y_0+\frac{v_{y,0}}{v_{x,0}}(x-x_0)-\frac{g}{2v_{x,0}^2}(x-x_0)^2$ |
+| Trajectory from the origin | $\displaystyle y(x) = \frac{v_{y,0}}{v_{x,0}}x-\frac{g}{2v_{x,0}^2}x^2$ |
+| Velocity direction | $\displaystyle \theta(t) = \operatorname{atan2}(v_y(t),v_x(t))$, provided the velocity is nonzero |
+
+When $v_x\ne 0$, the slope is $\displaystyle \frac{dy}{dx}=\frac{v_y}{v_x}$; the signs of both components determine the velocity direction's quadrant.
+
+----
+
+## Foundational Concepts & Newton's Three Laws
+
+* **Force and Inertial Mass**:
+  * **Inertial Mass Calibration**: Mass ($m$) measures quantity of matter and is calibrated relative to a standard mass ($m_s$) using inverse acceleration ratios:
+    $$m = m_s \left(\frac{a_s}{a}\right)$$
+  * **Force Vector Definition**: Force is a vector defined by $\vec{F} \equiv m \vec{a}$. Multiple applied forces combine as vectors:
+    $$\vec{F}_T = \sum \vec{F}_i$$
+
+* **Newton's First Law (Principle of Inertia)**:
+  * Every body continues in its state of rest, or of uniform motion in a right line, unless compelled to change that state by forces impressed upon it. If velocity is constant, the net force acting on the body is zero:
+    $$\sum \vec{F} = 0 \iff \vec{v} = \text{constant}$$
+
+* **Newton's Second Law & Momentum**:
+  * **Momentum ($\vec{p}$)**: Vector quantity defined by velocity and mass conjointly:
+    $$\vec{p} = m \vec{v}$$
+  * **Impulse ($\vec{I}$)**: An applied force acting over a time interval $\Delta t$ causes a change in momentum:
+    $$\vec{I} = \vec{F} \Delta t = \Delta \vec{p}$$
+  * **Equation of Motion**: Force is defined as the time derivative of momentum, reducing for constant mass to mass times acceleration:
+    $$\vec{F} = \frac{d\vec{p}}{dt} = m \frac{d\vec{v}}{dt} = m \vec{a}$$
+
+* **Newton's Third Law (Action-Reaction Pairs)**:
+  * To every action there is always opposed an equal reaction. The interaction forces between two bodies are equal in magnitude and opposite in direction:
+    $$\vec{F}_{1,2} = -\vec{F}_{2,1}$$
+
+---
+
+## Fundamental Force Laws
+
+* **Hooke's Law (Spring Restoring Force)**:
+  * Ideal springs produce a restoring force linearly proportional to compression or extension distance $x$:
+    $$F_x = -k x$$
+  * Accounting for spring pre-tensions ($F_0, F_1$):
+    $$F_x = \begin{cases} -F_0 - kx & (x > 0) \\ +F_1 - kx & (x < 0) \end{cases}$$
+
+* **Newton's Universal Law of Gravitation**:
+  * Attractive force between two point-like masses $m_1$ and $m_2$ separated by distance $r_{1,2}$:
+    $$\vec{F}_G = -G \frac{m_1 m_2}{r_{1,2}^2} \hat{r}_{1,2} \quad (G = 6.67 \times 10^{-11} \text{ N}\cdot\text{m}^2/\text{kg}^2)$$
+  * Gravitational force near Earth's surface reduces to:
+    $$\vec{F}_g = m \vec{g}$$
+
+* **Coulomb's Law (Electric Force)**:
+  * Electrostatic force between point charges $q_1$ and $q_2$ separated by distance $r_{1,2}$:
+    $$\vec{F}_E = k_e \frac{q_1 q_2}{r_{1,2}^2} \hat{r}_{1,2} \quad (k_e = 8.9875 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2)$$
+
+---
+
+## Constraint Forces & Friction
+
+* **Contact Force Decomposition**:
+  * The contact force $\vec{C}$ decomposes into a normal component $\vec{N}$ perpendicular to the surface and a tangential friction force $\vec{f}$ parallel to the surface:
+    $$\vec{C} = \vec{N} + \vec{f}$$
+
+* **Dry Friction**:
+  * **Kinetic Friction ($f_k$)**: Resists relative motion between sliding surfaces; independent of contact surface area and sliding speed:
+    $$f_k = \mu_k N$$
+  * **Static Friction ($f_s$)**: Prevents relative motion up to a maximum threshold:
+    $$0 \le f_s \le (f_s)_{\max} = \mu_s N \quad (\mu_s > \mu_k)$$
+
+---
+
+## Tension & Continuous Systems
+
+* **Tension in Ropes**:
+  * **Massless Rope**: Transmits tension uniformly throughout ($T = F_{\text{applied}}$).
+  * **Massive Rope Accelerating a Block**: Tension varies along distance $x$ from the block:
+    $$T(x) = \mu_k m_1 g + \left(m_1 + \frac{m_2}{d} x\right) a$$
+  * **Suspended Massive Rope under Gravity**: Modeled via differential element formulation $\frac{dT}{dy} = -\left(\frac{M}{L}\right) g$, resulting in:
+    $$T(y) = M g \left(1 - \frac{y}{L}\right)$$
+  * **Capstan Equation (Rope Wrapped Around Drum)**: Prevents slipping under tension load $T_A$ holding force $T_B$:
+    $$\frac{dT}{d\theta} = -\mu_s T \implies T_B = T_A e^{-\mu_s \theta_{BA}}$$
+
+---
+
+## Fluid Drag & Terminal Velocity
+
+* **Low Speed Viscous Drag (Stokes' Law)**:
+  * Viscous drag on a sphere of radius $R$ in a fluid of viscosity $\eta$:
+    $$F_{\text{drag}} = 6 \pi \eta R v$$
+  * Falling velocity from rest:
+    $$v(t) = \frac{m g}{6 \pi \eta R} \left(1 - e^{-(6\pi\eta R / m)t}\right)$$
+  * Terminal velocity $v_\infty$:
+    $$v_\infty = \frac{m g}{6 \pi \eta R} = \frac{2 \rho_m R^2 g}{9 \eta}$$
+
+* **High Speed Quadratic Drag**:
+  * Air drag at high velocities with drag coefficient $C_D$, area $A$, and air density $\rho$:
+    $$F_{\text{drag}} = \frac{1}{2} C_D A \rho v^2$$
+  * Velocity under drag deceleration alone ($\beta = \frac{1}{2} C_D A \rho$):
+    $$v(t) = \frac{v_0}{1 + v_0 \beta t / m}$$
+  * Terminal velocity in free fall under quadratic drag:
+    $$v_\infty = \sqrt{\frac{2 m g}{C_D A \rho}}$$
+  * Free fall velocity over time under quadratic drag:
+    $$v(t) = v_\infty \tanh\left(\frac{v_\infty \beta}{m} t\right)$$
 
 ----
 
