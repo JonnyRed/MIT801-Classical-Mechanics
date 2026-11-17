@@ -1,5 +1,71 @@
 # Physics Notes: Classical Mechanics
 
+## Table of Contents
+
+1. [Kinematic Motion](#kinematic-motion)
+   - [One-Dimensional Motion](#one-dimensional-motion)
+   - [Fundamental Relations](#fundamental-relations)
+   - [Constant Acceleration](#constant-acceleration)
+   - [Acceleration as a Function of Velocity](#acceleration-as-a-function-of-velocity)
+   - [Acceleration as a Function of Position](#acceleration-as-a-function-of-position)
+   - [Two-Dimensional Motion](#two-dimensional-motion)
+   - [Projectile Motion](#projectile-motion)
+   - [Trajectory Results](#trajectory-results)
+
+2. [Foundational Concepts & Newton's Three Laws](#foundational-concepts--newtons-three-laws)
+
+3. [Free-Body Force Diagrams](#free-body-force-diagrams)
+   - [System Definition](#system-definition)
+   - [Free-Body Diagram Representation](#free-body-diagram-representation)
+   - [Force Component Resolution](#force-component-resolution)
+   - [Internal vs. External Forces](#internal-vs-external-forces)
+   - [Physical Modeling](#physical-modeling)
+
+4. [Fundamental Force Laws](#fundamental-force-laws)
+   - [Hooke's Law](#hookes-law-spring-restoring-force)
+   - [Newton's Universal Law of Gravitation](#newtons-universal-law-of-gravitation)
+   - [Coulomb's Law](#coulombs-law-electric-force)
+
+5. [Constraint Forces & Friction](#constraint-forces--friction)
+   - [Contact Force Decomposition](#contact-force-decomposition)
+   - [Dry Friction](#dry-friction)
+
+6. [Tension & Continuous Systems](#tension--continuous-systems)
+
+7. [Fluid Drag & Terminal Velocity](#fluid-drag--terminal-velocity)
+   - [Low Speed Viscous Drag (Stokes' Law)](#low-speed-viscous-drag-stokes-law)
+   - [High Speed Quadratic Drag](#high-speed-quadratic-drag)
+
+8. [Uniform Circular Motion](#uniform-circular-motion)
+   - [Core Formulas](#core-formulas)
+   - [Vector Form](#vector-form)
+   - [Key Properties](#key-properties)
+   - [Lagrangian Form](#lagrangian-form)
+
+9. [Rotational Mechanics](#rotational-mechanics)
+   - [Rotational Kinematics](#rotational-kinematics)
+   - [Moment of Inertia](#moment-of-inertia)
+   - [Parallel Axis Theorem](#parallel-axis-theorem)
+   - [Vector Cross Product](#vector-cross-product)
+   - [Angular Momentum](#angular-momentum)
+   - [Torque](#torque)
+   - [Rotational Dynamics](#rotational-dynamics)
+   - [Conservation of Angular Momentum](#conservation-of-angular-momentum)
+   - [Rotational Work, Energy, and Power](#rotational-work-energy-and-power)
+
+10. [See Also](#see-also)
+
+11. [References](#references)
+
+---
+
+**Additional Resources:**
+- **[dimensionless.md](dimensionless.md)** — Dimensionless variables in kinematics and the physics-first approach to scaling
+- **[color-schemes.md](color-schemes.md)** — Visualization conventions and diagramming color palettes for classical mechanics
+- **[calculus-reference.md](calculus-reference.md)** — Arc length, parametric curves, and related calculus topics
+
+---
+
 ## Kinematic Motion
 
 Kinematics describes motion relative to a chosen coordinate system or reference frame.
@@ -139,6 +205,69 @@ When $v_x\ne 0$, the slope is $\displaystyle \frac{dy}{dx}=\frac{v_y}{v_x}$; the
 * **Newton's Third Law (Action-Reaction Pairs)**:
   * To every action there is always opposed an equal reaction. The interaction forces between two bodies are equal in magnitude and opposite in direction:
     $$\vec{F}_{1,2} = -\vec{F}_{2,1}$$
+
+---
+
+## Free-Body Force Diagrams
+
+### System Definition
+
+A **system** is a specifically defined collection of objects of interest. It can consist of a single isolated object or multiple objects. Because force is a vector, the total force acting on the system is:
+
+$$\vec{F}_{\text{total}} = \vec{F}_1 + \vec{F}_2 + \cdots$$
+
+### Free-Body Diagram Representation
+
+A **free-body force diagram** is a representation of the sum of all forces acting on a single system. The diagram:
+
+* Denotes the system by a large circular dot (point), representing the center of mass
+* Represents each force as an arrow emanating from the point
+* Shows the direction and relative magnitude of each force
+* Can be used with a Cartesian coordinate system to resolve forces into components
+
+**Common forces appearing on free-body diagrams:**
+- Contact forces
+- Tension
+- Gravitational force
+- Friction (static or kinetic)
+- Pressure forces
+- Spring forces
+- Electric and magnetic forces
+
+### Force Component Resolution
+
+In Cartesian coordinates, the total force can be decomposed into component vectors:
+
+$$\vec{F} = F_x \hat{i} + F_y \hat{j} + F_z \hat{k}$$
+
+Each component is the vector sum of the individual component vectors from each contributing force:
+
+$$F_x = F_{1,x} + F_{2,x} + \cdots$$
+$$F_y = F_{1,y} + F_{2,y} + \cdots$$
+$$F_z = F_{1,z} + F_{2,z} + \cdots$$
+
+### Internal vs. External Forces
+
+| Force Type | Definition | Appears in FBD? |
+| --- | --- | --- |
+| **External Forces** | Forces acting on the system from outside the environment | Yes ✓ |
+| **Internal Forces** | Forces between objects within the system itself | No ✗ |
+
+**Key principle:** By Newton's Third Law, internal forces occur in equal and opposite pairs within a system, so they cancel out when analyzing the system as a whole. Only external forces affect the net motion of the system.
+
+**Example:** For a system of (Book + Table):
+- *External:* Gravity, applied push, air resistance
+- *Internal:* Normal force between book and table (action-reaction pair cancels)
+
+### Physical Modeling
+
+Developing an accurate physical model requires deciding which forces to include:
+
+* **Start simple** — Include only the dominant forces; exclude small-order effects
+* **Validate predictions** — Check if the simple model matches observations
+* **Refine incrementally** — Add complications once satisfied with the basic model
+
+**Example consideration:** Air resistance is often neglected initially because the mathematics is complex, but can substantially change motion. Friction between surfaces, however, has a simple mathematical form and is often included without making the model intractable.
 
 ---
 
@@ -377,6 +506,7 @@ If the net external torque on a system about point $S$ is zero, its total angula
 
 ## See Also
 
+- **[dimensionless.md](dimensionless.md)** — Dimensionless variables in kinematics and the physics-first approach to scaling
 - **[color-schemes.md](color-schemes.md)** — Visualization conventions and diagramming color palettes for classical mechanics
 - **[calculus-reference.md](calculus-reference.md)** — Arc length, parametric curves, and related calculus topics
 
